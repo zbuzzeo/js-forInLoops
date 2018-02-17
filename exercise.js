@@ -58,6 +58,13 @@ Console.log the values of the object. Use the donutBox object from the previous 
 /*@param {Object}
 @return {Array}*/
 
+var legend = {
+	firstName: "Bruce",
+	lastName: "Lee",
+	birthPlace: "San Francisco, CA",
+	occupation: "Bad Ass",
+	hobbies: ["martial arts", "fitness", "dancing", "knitting", "coding"]
+};
 
 
 /*5. Create a function that will take in an object and will return the number of properties (key -value pairs) in the object. Use the legend object above.
@@ -75,5 +82,7 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects
 
 /*@param {Object}
 @return {Object}*/
+
+
 
 
