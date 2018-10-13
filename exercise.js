@@ -1,3 +1,8 @@
+
+function spacer(exerciseNum){
+      console.log(' \nProblem:', exerciseNum);
+}
+
 // A for-in loop is used to iterate through the properties (key - value pairs) of an object.
 // Here is the syntax:
 
@@ -15,9 +20,14 @@ var prepClass = {
 	areTheyCool: true
 };
 
+spacer('Example');
 for(var prop in prepClass){ //loop through all the properties in the object
 	console.log(prop); //prints the keys in the object
 	console.log(prepClass[prop]); //prints the values in the object
+}
+
+for (var property in prepClass){
+      console.log(property + ':', prepClass[property]);
 }
 
 
@@ -36,7 +46,14 @@ var donutBox = {
 	taste: "fabulous"
 };
 
+function findPropertiesOf(object){
+      for (var property in object){
+            console.log(property);
+      }
+}
 
+spacer(1);
+findPropertiesOf(donutBox);
 
 /*2.  Create a function that will take in an object and loop through the properties of that object.
 Console.log the values of the object. Use the donutBox object from the previous exercise above*/
