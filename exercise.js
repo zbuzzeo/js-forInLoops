@@ -61,14 +61,27 @@ Console.log the values of the object. Use the donutBox object from the previous 
 /*@param {Object}
 @return {Object}*/
 
+function logObjectValues(object){
+      for (var i in object){
+            console.log(i + ':', object[i]);
+      }
+}
 
+spacer(2);
+logObjectValues(donutBox);
 
 /*3. Create a function that will take in an object and will delete the taste property from the donutBox object above.*/
 
 /*@param {Object}
 @return {Object}*/
 
+function removeProperty(object){
+      delete object['taste'];
+      return object;
+}
 
+spacer(3);
+console.log(removeProperty(donutBox));
 
 /*4. Create a function that will take in an object and will return all the values of the object in an array.*/
 
@@ -83,6 +96,16 @@ var legend = {
 	hobbies: ["martial arts", "fitness", "dancing", "knitting", "coding"]
 };
 
+function createArrayWithProperties(object){
+      var newArray = [];
+      for (var i in object){
+            newArray.push(object[i]);
+      }
+      return newArray;
+}
+
+spacer(4);
+console.log(createArrayWithProperties(legend));
 
 /*5. Create a function that will take in an object and will return the number of properties (key -value pairs) in the object. Use the legend object above.
 
@@ -93,13 +116,25 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects
 /*@param {Object}
 @return {Number}*/
 
-
+function countKeyValuePairs(object){
+      
+}
 
 /*6. Create a function that will take in an object and check to see if the legend object has a property of 'occupation'.*/
 
 /*@param {Object}
 @return {Object}*/
 
+function findProperty(object, propertyName){
+      for (var i in object){
+            if (object.hasOwnProperty(propertyName) === true){
+                  return 'Object has property ' + '\'' + propertyName + '.\'';
+            }else{
+                  return 'Object does NOT have property ' + '\'' + propertyName + '.\'';
+            }
+      }
+}
 
-
-
+spacer(6);
+console.log(findProperty(legend, 'occupation'));
+console.log(findProperty(legend, 'asijdjasdoias'));
