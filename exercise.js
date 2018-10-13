@@ -117,8 +117,17 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects
 @return {Number}*/
 
 function countKeyValuePairs(object){
-      
+      var count = 0;                //    variable created for number of properties found.
+      for (var i in object){
+            if (object.hasOwnProperty(i)){
+                  count++;
+            }
+      }
+      return 'Object ' + object + ' has ' + count + ' properties.';;
 }
+
+spacer(5);
+console.log(countKeyValuePairs(legend));
 
 /*6. Create a function that will take in an object and check to see if the legend object has a property of 'occupation'.*/
 
